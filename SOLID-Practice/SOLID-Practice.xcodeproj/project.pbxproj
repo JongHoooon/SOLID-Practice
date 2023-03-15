@@ -23,7 +23,6 @@
 		ED773F9629C1EAA200A0849D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED773F9429C1E8D100A0849D /* XCTest.framework */; platformFilter = ios; };
 		ED773F9729C1EAA900A0849D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED773F9429C1E8D100A0849D /* XCTest.framework */; platformFilter = ios; };
 		ED773F9B29C1ECE400A0849D /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED773F9A29C1ECE400A0849D /* Cell.swift */; };
-		ED773F9E29C1EF5C00A0849D /* NotSRP.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED773F9D29C1EF5C00A0849D /* NotSRP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +57,8 @@
 		ED773F7829C1E54700A0849D /* SOLID_PracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOLID_PracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		ED773F9429C1E8D100A0849D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		ED773F9A29C1ECE400A0849D /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
-		ED773F9D29C1EF5C00A0849D /* NotSRP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotSRP.swift; sourceTree = "<group>"; };
+		ED773FA129C1F3A300A0849D /* NotSRP.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = NotSRP.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		ED773FA229C2096000A0849D /* SRPwithFacade.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SRPwithFacade.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,10 +120,8 @@
 				ED773F5529C1E54600A0849D /* AppDelegate.swift */,
 				ED773F5729C1E54600A0849D /* SceneDelegate.swift */,
 				ED773F9929C1ECC300A0849D /* MainView */,
-				ED773F9C29C1EF4800A0849D /* New Group */,
-				ED773F5E29C1E54700A0849D /* Assets.xcassets */,
-				ED773F6029C1E54700A0849D /* LaunchScreen.storyboard */,
-				ED773F6329C1E54700A0849D /* Info.plist */,
+				ED773F9F29C1F30D00A0849D /* SRP */,
+				ED773FA029C1F31D00A0849D /* Resources */,
 			);
 			path = "SOLID-Practice";
 			sourceTree = "<group>";
@@ -162,12 +160,23 @@
 			path = MainView;
 			sourceTree = "<group>";
 		};
-		ED773F9C29C1EF4800A0849D /* New Group */ = {
+		ED773F9F29C1F30D00A0849D /* SRP */ = {
 			isa = PBXGroup;
 			children = (
-				ED773F9D29C1EF5C00A0849D /* NotSRP.swift */,
+				ED773FA129C1F3A300A0849D /* NotSRP.playground */,
+				ED773FA229C2096000A0849D /* SRPwithFacade.playground */,
 			);
-			path = "New Group";
+			path = SRP;
+			sourceTree = "<group>";
+		};
+		ED773FA029C1F31D00A0849D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ED773F5E29C1E54700A0849D /* Assets.xcassets */,
+				ED773F6029C1E54700A0849D /* LaunchScreen.storyboard */,
+				ED773F6329C1E54700A0849D /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,7 +321,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED773F5A29C1E54600A0849D /* MainViewController.swift in Sources */,
-				ED773F9E29C1EF5C00A0849D /* NotSRP.swift in Sources */,
 				ED773F9B29C1ECE400A0849D /* Cell.swift in Sources */,
 				ED773F5629C1E54600A0849D /* AppDelegate.swift in Sources */,
 				ED773F5829C1E54600A0849D /* SceneDelegate.swift in Sources */,
@@ -486,7 +494,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 82J7RU93V4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SOLID-Practice/Info.plist";
+				INFOPLIST_FILE = "SOLID-Practice/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -513,7 +521,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 82J7RU93V4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SOLID-Practice/Info.plist";
+				INFOPLIST_FILE = "SOLID-Practice/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

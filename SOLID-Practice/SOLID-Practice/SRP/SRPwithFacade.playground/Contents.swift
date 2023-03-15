@@ -5,7 +5,7 @@ class Banker {
     enum Departmnet {
         case card           // 카드
         case insurance      // 보험
-        case development    // 적금
+        case development    // 개발
     }
     
     let department: Departmnet

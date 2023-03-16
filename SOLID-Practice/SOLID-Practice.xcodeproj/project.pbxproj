@@ -29,6 +29,10 @@
 		EDD2A52D29C2AB200001A3E6 /* EmojiUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A52C29C2AB200001A3E6 /* EmojiUseCase.swift */; };
 		EDD2A53129C2ABD10001A3E6 /* EmojiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A53029C2ABD10001A3E6 /* EmojiModel.swift */; };
 		EDD2A53329C2C8DB0001A3E6 /* EmojiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A53229C2C8DB0001A3E6 /* EmojiViewModel.swift */; };
+		EDD2A53729C303CE0001A3E6 /* CardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A53629C303CE0001A3E6 /* CardUseCase.swift */; };
+		EDD2A53929C304370001A3E6 /* HDUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A53829C304370001A3E6 /* HDUseCase.swift */; };
+		EDD2A53B29C304970001A3E6 /* WRUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A53A29C304970001A3E6 /* WRUseCase.swift */; };
+		EDD2A53D29C305710001A3E6 /* PointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A53C29C305710001A3E6 /* PointViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,10 @@
 		EDD2A52C29C2AB200001A3E6 /* EmojiUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiUseCase.swift; sourceTree = "<group>"; };
 		EDD2A53029C2ABD10001A3E6 /* EmojiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiModel.swift; sourceTree = "<group>"; };
 		EDD2A53229C2C8DB0001A3E6 /* EmojiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiViewModel.swift; sourceTree = "<group>"; };
+		EDD2A53629C303CE0001A3E6 /* CardUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardUseCase.swift; sourceTree = "<group>"; };
+		EDD2A53829C304370001A3E6 /* HDUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDUseCase.swift; sourceTree = "<group>"; };
+		EDD2A53A29C304970001A3E6 /* WRUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRUseCase.swift; sourceTree = "<group>"; };
+		EDD2A53C29C305710001A3E6 /* PointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +142,7 @@
 				ED773F9929C1ECC300A0849D /* MainView */,
 				ED773F9F29C1F30D00A0849D /* SRP */,
 				EDD2A52229C2257E0001A3E6 /* OCP */,
+				EDD2A53529C303120001A3E6 /* LSP */,
 				ED773FA029C1F31D00A0849D /* Resources */,
 			);
 			path = "SOLID-Practice";
@@ -219,6 +228,17 @@
 				EDD2A52829C2A6780001A3E6 /* UserDefaultsRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		EDD2A53529C303120001A3E6 /* LSP */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2A53629C303CE0001A3E6 /* CardUseCase.swift */,
+				EDD2A53829C304370001A3E6 /* HDUseCase.swift */,
+				EDD2A53A29C304970001A3E6 /* WRUseCase.swift */,
+				EDD2A53C29C305710001A3E6 /* PointViewController.swift */,
+			);
+			path = LSP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,10 +384,14 @@
 			files = (
 				EDD2A52929C2A6780001A3E6 /* UserDefaultsRepository.swift in Sources */,
 				ED773F5A29C1E54600A0849D /* MainViewController.swift in Sources */,
+				EDD2A53929C304370001A3E6 /* HDUseCase.swift in Sources */,
 				EDD2A52D29C2AB200001A3E6 /* EmojiUseCase.swift in Sources */,
 				EDD2A53329C2C8DB0001A3E6 /* EmojiViewModel.swift in Sources */,
+				EDD2A53D29C305710001A3E6 /* PointViewController.swift in Sources */,
 				EDD2A52729C2261A0001A3E6 /* EmojiViewController.swift in Sources */,
+				EDD2A53B29C304970001A3E6 /* WRUseCase.swift in Sources */,
 				EDD2A52B29C2A7BE0001A3E6 /* UserDefalutsService.swift in Sources */,
+				EDD2A53729C303CE0001A3E6 /* CardUseCase.swift in Sources */,
 				EDD2A53129C2ABD10001A3E6 /* EmojiModel.swift in Sources */,
 				ED773F9B29C1ECE400A0849D /* Cell.swift in Sources */,
 				ED773F5629C1E54600A0849D /* AppDelegate.swift in Sources */,

@@ -23,6 +23,10 @@
 		ED773F9629C1EAA200A0849D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED773F9429C1E8D100A0849D /* XCTest.framework */; platformFilter = ios; };
 		ED773F9729C1EAA900A0849D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED773F9429C1E8D100A0849D /* XCTest.framework */; platformFilter = ios; };
 		ED773F9B29C1ECE400A0849D /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED773F9A29C1ECE400A0849D /* Cell.swift */; };
+		EDD2A52729C2261A0001A3E6 /* EmojiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A52629C2261A0001A3E6 /* EmojiViewController.swift */; };
+		EDD2A52929C2A6780001A3E6 /* UserDefaultsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A52829C2A6780001A3E6 /* UserDefaultsRepository.swift */; };
+		EDD2A52B29C2A7BE0001A3E6 /* UserDefalutsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A52A29C2A7BE0001A3E6 /* UserDefalutsService.swift */; };
+		EDD2A52D29C2AB200001A3E6 /* EmojiUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A52C29C2AB200001A3E6 /* EmojiUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		ED773F9A29C1ECE400A0849D /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		ED773FA129C1F3A300A0849D /* NotSRP.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = NotSRP.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		ED773FA229C2096000A0849D /* SRPwithFacade.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SRPwithFacade.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		EDD2A52629C2261A0001A3E6 /* EmojiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiViewController.swift; sourceTree = "<group>"; };
+		EDD2A52829C2A6780001A3E6 /* UserDefaultsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsRepository.swift; sourceTree = "<group>"; };
+		EDD2A52A29C2A7BE0001A3E6 /* UserDefalutsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefalutsService.swift; sourceTree = "<group>"; };
+		EDD2A52C29C2AB200001A3E6 /* EmojiUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +129,7 @@
 				ED773F5729C1E54600A0849D /* SceneDelegate.swift */,
 				ED773F9929C1ECC300A0849D /* MainView */,
 				ED773F9F29C1F30D00A0849D /* SRP */,
+				EDD2A52229C2257E0001A3E6 /* OCP */,
 				ED773FA029C1F31D00A0849D /* Resources */,
 			);
 			path = "SOLID-Practice";
@@ -177,6 +186,33 @@
 				ED773F6329C1E54700A0849D /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		EDD2A52229C2257E0001A3E6 /* OCP */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2A52329C225C10001A3E6 /* Service */,
+				EDD2A52429C225C60001A3E6 /* Repository */,
+				EDD2A52629C2261A0001A3E6 /* EmojiViewController.swift */,
+				EDD2A52C29C2AB200001A3E6 /* EmojiUseCase.swift */,
+			);
+			path = OCP;
+			sourceTree = "<group>";
+		};
+		EDD2A52329C225C10001A3E6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2A52A29C2A7BE0001A3E6 /* UserDefalutsService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		EDD2A52429C225C60001A3E6 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2A52829C2A6780001A3E6 /* UserDefaultsRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,7 +356,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD2A52929C2A6780001A3E6 /* UserDefaultsRepository.swift in Sources */,
 				ED773F5A29C1E54600A0849D /* MainViewController.swift in Sources */,
+				EDD2A52D29C2AB200001A3E6 /* EmojiUseCase.swift in Sources */,
+				EDD2A52729C2261A0001A3E6 /* EmojiViewController.swift in Sources */,
+				EDD2A52B29C2A7BE0001A3E6 /* UserDefalutsService.swift in Sources */,
 				ED773F9B29C1ECE400A0849D /* Cell.swift in Sources */,
 				ED773F5629C1E54600A0849D /* AppDelegate.swift in Sources */,
 				ED773F5829C1E54600A0849D /* SceneDelegate.swift in Sources */,

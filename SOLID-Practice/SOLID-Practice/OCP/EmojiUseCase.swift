@@ -8,13 +8,13 @@
 import Foundation
 import RxSwift
 
-protocol EmojiUserCase {
+protocol EmojiUseCase {
     func updateEmoji(with: EmojiModel) -> Observable<EmojiModel>
     func getCurrentEmojiCount() -> Observable<EmojiModel>
-    func removeEmojuCount()
+    func removeEmojuCount() -> Observable<(Int, Int)>
 }
 
-final class EmojiUserCaseImpl: EmojiUserCase {
+final class EmojiUseCaseImpl: EmojiUseCase {
     private let userDefaultsService: UserDefaultsService
     
     init(userDefaultsService: UserDefaultsService) {
@@ -48,6 +48,7 @@ final class EmojiUserCaseImpl: EmojiUserCase {
             currentRedColor: currentRedCount,
             currentGreenColor: currentGreenCount
         )
+        
         return Observable.just(emojiModel)
     }
     
@@ -59,18 +60,23 @@ final class EmojiUserCaseImpl: EmojiUserCase {
             currentRedColor: currentRedCount,
             currentGreenColor: currentGreenCount
         )
+        
         return Observable.just(emojiModel)
     }
     
-    func removeEmojuCount() {
+    func removeEmojuCount() -> Observable<(Int, Int)> {
         userDefaultsService.removeRedCount()
         userDefaultsService.removeGreenCount()
+        
+        let currentRedCount: Int = userDefaultsService.getRedCount() ?? 0
+        let currentGreenCount: Int = userDefaultsService.getGreenCount() ?? 0
+        return Observable.just((currentRedCount, currentGreenCount))
     }
 }
 
 // MARK: - Private Method
 
-private extension EmojiUserCaseImpl {
+private extension EmojiUseCaseImpl {
     func updateEmoji(_ redCount: Int, _ greenCount: Int) {
         userDefaultsService.saveRedCount(redCount)
         userDefaultsService.saveGreenCount(greenCount)

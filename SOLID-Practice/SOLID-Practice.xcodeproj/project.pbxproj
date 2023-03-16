@@ -28,6 +28,7 @@
 		EDD2A52B29C2A7BE0001A3E6 /* UserDefalutsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A52A29C2A7BE0001A3E6 /* UserDefalutsService.swift */; };
 		EDD2A52D29C2AB200001A3E6 /* EmojiUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A52C29C2AB200001A3E6 /* EmojiUseCase.swift */; };
 		EDD2A53129C2ABD10001A3E6 /* EmojiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A53029C2ABD10001A3E6 /* EmojiModel.swift */; };
+		EDD2A53329C2C8DB0001A3E6 /* EmojiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A53229C2C8DB0001A3E6 /* EmojiViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		EDD2A52A29C2A7BE0001A3E6 /* UserDefalutsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefalutsService.swift; sourceTree = "<group>"; };
 		EDD2A52C29C2AB200001A3E6 /* EmojiUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiUseCase.swift; sourceTree = "<group>"; };
 		EDD2A53029C2ABD10001A3E6 /* EmojiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiModel.swift; sourceTree = "<group>"; };
+		EDD2A53229C2C8DB0001A3E6 /* EmojiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 				EDD2A52329C225C10001A3E6 /* Service */,
 				EDD2A52429C225C60001A3E6 /* Repository */,
 				EDD2A52629C2261A0001A3E6 /* EmojiViewController.swift */,
+				EDD2A53229C2C8DB0001A3E6 /* EmojiViewModel.swift */,
 				EDD2A52C29C2AB200001A3E6 /* EmojiUseCase.swift */,
 				EDD2A53029C2ABD10001A3E6 /* EmojiModel.swift */,
 			);
@@ -362,6 +365,7 @@
 				EDD2A52929C2A6780001A3E6 /* UserDefaultsRepository.swift in Sources */,
 				ED773F5A29C1E54600A0849D /* MainViewController.swift in Sources */,
 				EDD2A52D29C2AB200001A3E6 /* EmojiUseCase.swift in Sources */,
+				EDD2A53329C2C8DB0001A3E6 /* EmojiViewModel.swift in Sources */,
 				EDD2A52729C2261A0001A3E6 /* EmojiViewController.swift in Sources */,
 				EDD2A52B29C2A7BE0001A3E6 /* UserDefalutsService.swift in Sources */,
 				EDD2A53129C2ABD10001A3E6 /* EmojiModel.swift in Sources */,

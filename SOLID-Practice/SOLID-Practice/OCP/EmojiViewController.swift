@@ -79,11 +79,26 @@ final class EmojiViewController: UIViewController {
         view.backgroundColor = .systemBackground
         configLayout()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
 }
+
+// MARK: - Bind
 
 private extension EmojiViewController {
     
+    private func bindInput() {
+        
+    }
+    
+    private func bindOutput() {
+        
+    }
 }
+
+// MARK: - Private Method
 
 private extension EmojiViewController {
     func configLayout() {

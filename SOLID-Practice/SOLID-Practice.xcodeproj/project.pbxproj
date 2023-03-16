@@ -33,6 +33,7 @@
 		EDD2A53929C304370001A3E6 /* HDUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A53829C304370001A3E6 /* HDUseCase.swift */; };
 		EDD2A53B29C304970001A3E6 /* WRUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A53A29C304970001A3E6 /* WRUseCase.swift */; };
 		EDD2A53D29C305710001A3E6 /* PointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A53C29C305710001A3E6 /* PointViewController.swift */; };
+		EDD2A53F29C31CF70001A3E6 /* PointViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A53E29C31CF70001A3E6 /* PointViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		EDD2A53829C304370001A3E6 /* HDUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDUseCase.swift; sourceTree = "<group>"; };
 		EDD2A53A29C304970001A3E6 /* WRUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRUseCase.swift; sourceTree = "<group>"; };
 		EDD2A53C29C305710001A3E6 /* PointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointViewController.swift; sourceTree = "<group>"; };
+		EDD2A53E29C31CF70001A3E6 /* PointViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 				EDD2A53829C304370001A3E6 /* HDUseCase.swift */,
 				EDD2A53A29C304970001A3E6 /* WRUseCase.swift */,
 				EDD2A53C29C305710001A3E6 /* PointViewController.swift */,
+				EDD2A53E29C31CF70001A3E6 /* PointViewModel.swift */,
 			);
 			path = LSP;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				EDD2A53729C303CE0001A3E6 /* CardUseCase.swift in Sources */,
 				EDD2A53129C2ABD10001A3E6 /* EmojiModel.swift in Sources */,
 				ED773F9B29C1ECE400A0849D /* Cell.swift in Sources */,
+				EDD2A53F29C31CF70001A3E6 /* PointViewModel.swift in Sources */,
 				ED773F5629C1E54600A0849D /* AppDelegate.swift in Sources */,
 				ED773F5829C1E54600A0849D /* SceneDelegate.swift in Sources */,
 			);

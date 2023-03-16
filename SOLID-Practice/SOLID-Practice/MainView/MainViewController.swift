@@ -59,12 +59,22 @@ extension MainViewController: UITableViewDelegate {
         switch indexPath.row {
         case 0:
             // MARK: OCP
+            
             let userDefaultsRepositoryImpl = UserDefaultsRepositoryImpl.shared
             let userDefaultsServiceImpl = UserDefaultServiceImpl(userDefaultRepository: userDefaultsRepositoryImpl)
             let emojiUseCaseImpl = EmojiUseCaseImpl(userDefaultsService: userDefaultsServiceImpl)
             let viewModel = EmojiViewModelImpl(emojiUserCase: emojiUseCaseImpl)
             let vc = EmojiViewController(viewModel: viewModel)
             navigationController?.pushViewController(vc, animated: true)
+        case 1:
+            // MARK: LSP
+            
+            let randomInt = Int.random(in: 0...1)
+            let useCase: CardUseCase = randomInt == 0 ? HDUseCase() : WRUseCase()
+            let viewModel = PointViewModelImpl(cardUseCase: useCase)
+            let vc = PointViewController(viewModel: viewModel)
+            navigationController?.pushViewController(vc, animated: true)
+            print(useCase)
         default:
             print("default")
         }

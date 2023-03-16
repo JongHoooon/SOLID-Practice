@@ -39,6 +39,12 @@
 		EDD2A54A29C3775A0001A3E6 /* ProductListDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A54929C3775A0001A3E6 /* ProductListDIContainer.swift */; };
 		EDD2A54E29C37C410001A3E6 /* Application_NotFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A54D29C37C410001A3E6 /* Application_NotFactory.swift */; };
 		EDD2A55029C37C540001A3E6 /* ServiceConcrete_NotFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A54F29C37C540001A3E6 /* ServiceConcrete_NotFactory.swift */; };
+		EDD2A55429C386180001A3E6 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A55329C386180001A3E6 /* ServiceFactory.swift */; };
+		EDD2A55629C3864A0001A3E6 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A55529C3864A0001A3E6 /* Service.swift */; };
+		EDD2A55829C386AA0001A3E6 /* ServiceConcrete_ApplyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A55729C386AA0001A3E6 /* ServiceConcrete_ApplyFactory.swift */; };
+		EDD2A55A29C386F70001A3E6 /* ServiceConcreteImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A55929C386F70001A3E6 /* ServiceConcreteImpl.swift */; };
+		EDD2A55C29C3877B0001A3E6 /* Application_ApplyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A55B29C3877B0001A3E6 /* Application_ApplyFactory.swift */; };
+		EDD2A55E29C38D2D0001A3E6 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A55D29C38D2D0001A3E6 /* ProductListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +99,12 @@
 		EDD2A54929C3775A0001A3E6 /* ProductListDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListDIContainer.swift; sourceTree = "<group>"; };
 		EDD2A54D29C37C410001A3E6 /* Application_NotFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application_NotFactory.swift; sourceTree = "<group>"; };
 		EDD2A54F29C37C540001A3E6 /* ServiceConcrete_NotFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConcrete_NotFactory.swift; sourceTree = "<group>"; };
+		EDD2A55329C386180001A3E6 /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
+		EDD2A55529C3864A0001A3E6 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		EDD2A55729C386AA0001A3E6 /* ServiceConcrete_ApplyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConcrete_ApplyFactory.swift; sourceTree = "<group>"; };
+		EDD2A55929C386F70001A3E6 /* ServiceConcreteImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConcreteImpl.swift; sourceTree = "<group>"; };
+		EDD2A55B29C3877B0001A3E6 /* Application_ApplyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application_ApplyFactory.swift; sourceTree = "<group>"; };
+		EDD2A55D29C38D2D0001A3E6 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +294,7 @@
 				EDD2A54529C374200001A3E6 /* Product.swift */,
 				EDD2A54729C375BA0001A3E6 /* ProductListUsecase.swift */,
 				EDD2A54929C3775A0001A3E6 /* ProductListDIContainer.swift */,
+				EDD2A55D29C38D2D0001A3E6 /* ProductListViewController.swift */,
 			);
 			path = ProductList;
 			sourceTree = "<group>";
@@ -289,10 +302,31 @@
 		EDD2A54B29C37AC70001A3E6 /* Factory */ = {
 			isa = PBXGroup;
 			children = (
+				EDD2A55129C385C40001A3E6 /* NotFactory */,
+				EDD2A55229C385CC0001A3E6 /* ApplyFactory */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		EDD2A55129C385C40001A3E6 /* NotFactory */ = {
+			isa = PBXGroup;
+			children = (
 				EDD2A54D29C37C410001A3E6 /* Application_NotFactory.swift */,
 				EDD2A54F29C37C540001A3E6 /* ServiceConcrete_NotFactory.swift */,
 			);
-			path = Factory;
+			path = NotFactory;
+			sourceTree = "<group>";
+		};
+		EDD2A55229C385CC0001A3E6 /* ApplyFactory */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2A55B29C3877B0001A3E6 /* Application_ApplyFactory.swift */,
+				EDD2A55529C3864A0001A3E6 /* Service.swift */,
+				EDD2A55929C386F70001A3E6 /* ServiceConcreteImpl.swift */,
+				EDD2A55329C386180001A3E6 /* ServiceFactory.swift */,
+				EDD2A55729C386AA0001A3E6 /* ServiceConcrete_ApplyFactory.swift */,
+			);
+			path = ApplyFactory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,19 +475,25 @@
 				EDD2A55029C37C540001A3E6 /* ServiceConcrete_NotFactory.swift in Sources */,
 				ED773F5A29C1E54600A0849D /* MainViewController.swift in Sources */,
 				EDD2A53929C304370001A3E6 /* HDUseCase.swift in Sources */,
+				EDD2A55829C386AA0001A3E6 /* ServiceConcrete_ApplyFactory.swift in Sources */,
 				EDD2A52D29C2AB200001A3E6 /* EmojiUseCase.swift in Sources */,
 				EDD2A53329C2C8DB0001A3E6 /* EmojiViewModel.swift in Sources */,
 				EDD2A53D29C305710001A3E6 /* PointViewController.swift in Sources */,
 				EDD2A52729C2261A0001A3E6 /* EmojiViewController.swift in Sources */,
 				EDD2A53B29C304970001A3E6 /* WRUseCase.swift in Sources */,
 				EDD2A54E29C37C410001A3E6 /* Application_NotFactory.swift in Sources */,
+				EDD2A55429C386180001A3E6 /* ServiceFactory.swift in Sources */,
 				EDD2A52B29C2A7BE0001A3E6 /* UserDefalutsService.swift in Sources */,
+				EDD2A55E29C38D2D0001A3E6 /* ProductListViewController.swift in Sources */,
 				EDD2A54629C374200001A3E6 /* Product.swift in Sources */,
 				EDD2A53729C303CE0001A3E6 /* CardUseCase.swift in Sources */,
 				EDD2A54A29C3775A0001A3E6 /* ProductListDIContainer.swift in Sources */,
 				EDD2A53129C2ABD10001A3E6 /* EmojiModel.swift in Sources */,
+				EDD2A55C29C3877B0001A3E6 /* Application_ApplyFactory.swift in Sources */,
+				EDD2A55A29C386F70001A3E6 /* ServiceConcreteImpl.swift in Sources */,
 				ED773F9B29C1ECE400A0849D /* Cell.swift in Sources */,
 				EDD2A53F29C31CF70001A3E6 /* PointViewModel.swift in Sources */,
+				EDD2A55629C3864A0001A3E6 /* Service.swift in Sources */,
 				ED773F5629C1E54600A0849D /* AppDelegate.swift in Sources */,
 				ED773F5829C1E54600A0849D /* SceneDelegate.swift in Sources */,
 			);

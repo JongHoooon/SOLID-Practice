@@ -18,6 +18,9 @@ protocol UserDefaultsService {
     
     func getRedCount() -> Int?
     func getGreenCount() -> Int?
+    
+    func removeRedCount()
+    func removeGreenCount()
 }
 
 class UserDefaultServiceImpl: UserDefaultsService {
@@ -45,5 +48,15 @@ class UserDefaultServiceImpl: UserDefaultsService {
     
     func getGreenCount() -> Int? {
         userDefaultRepository.get(Key.greenCount.rawValue)
+    }
+    
+    // MARK: - Remove
+    
+    func removeRedCount() {
+        userDefaultRepository.remove(Key.redCount.rawValue)
+    }
+    
+    func removeGreenCount() {
+        userDefaultRepository.remove(Key.greenCount.rawValue)
     }
 }

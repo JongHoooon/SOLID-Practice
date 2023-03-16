@@ -10,7 +10,7 @@ import Foundation
 protocol UserDefaultsRepository {
     func save(_ key: String, _ value: Int)
     func get(_ key: String) -> Int?
-    func delete(_ key: String)
+    func remove(_ key: String)
 }
 
 class UserDefaultsRepositoryImpl: UserDefaultsRepository {
@@ -27,7 +27,7 @@ class UserDefaultsRepositoryImpl: UserDefaultsRepository {
         return standard.object(forKey: key) as? Int
     }
     
-    func delete(_ key: String) {
+    func remove(_ key: String) {
         return standard.removeObject(forKey: key)
     }
 }

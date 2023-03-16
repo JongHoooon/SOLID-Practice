@@ -34,6 +34,11 @@
 		EDD2A53B29C304970001A3E6 /* WRUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A53A29C304970001A3E6 /* WRUseCase.swift */; };
 		EDD2A53D29C305710001A3E6 /* PointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A53C29C305710001A3E6 /* PointViewController.swift */; };
 		EDD2A53F29C31CF70001A3E6 /* PointViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A53E29C31CF70001A3E6 /* PointViewModel.swift */; };
+		EDD2A54629C374200001A3E6 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A54529C374200001A3E6 /* Product.swift */; };
+		EDD2A54829C375BA0001A3E6 /* ProductListUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A54729C375BA0001A3E6 /* ProductListUsecase.swift */; };
+		EDD2A54A29C3775A0001A3E6 /* ProductListDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A54929C3775A0001A3E6 /* ProductListDIContainer.swift */; };
+		EDD2A54E29C37C410001A3E6 /* Application_NotFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A54D29C37C410001A3E6 /* Application_NotFactory.swift */; };
+		EDD2A55029C37C540001A3E6 /* ServiceConcrete_NotFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD2A54F29C37C540001A3E6 /* ServiceConcrete_NotFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +86,13 @@
 		EDD2A53A29C304970001A3E6 /* WRUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRUseCase.swift; sourceTree = "<group>"; };
 		EDD2A53C29C305710001A3E6 /* PointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointViewController.swift; sourceTree = "<group>"; };
 		EDD2A53E29C31CF70001A3E6 /* PointViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointViewModel.swift; sourceTree = "<group>"; };
+		EDD2A54129C336210001A3E6 /* NotISP.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = NotISP.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		EDD2A54229C3471D0001A3E6 /* ISP.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ISP.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		EDD2A54529C374200001A3E6 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		EDD2A54729C375BA0001A3E6 /* ProductListUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListUsecase.swift; sourceTree = "<group>"; };
+		EDD2A54929C3775A0001A3E6 /* ProductListDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListDIContainer.swift; sourceTree = "<group>"; };
+		EDD2A54D29C37C410001A3E6 /* Application_NotFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application_NotFactory.swift; sourceTree = "<group>"; };
+		EDD2A54F29C37C540001A3E6 /* ServiceConcrete_NotFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConcrete_NotFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +157,8 @@
 				ED773F9F29C1F30D00A0849D /* SRP */,
 				EDD2A52229C2257E0001A3E6 /* OCP */,
 				EDD2A53529C303120001A3E6 /* LSP */,
+				EDD2A54029C3360E0001A3E6 /* ISP */,
+				EDD2A54329C374030001A3E6 /* DIP */,
 				ED773FA029C1F31D00A0849D /* Resources */,
 			);
 			path = "SOLID-Practice";
@@ -242,6 +256,43 @@
 				EDD2A53E29C31CF70001A3E6 /* PointViewModel.swift */,
 			);
 			path = LSP;
+			sourceTree = "<group>";
+		};
+		EDD2A54029C3360E0001A3E6 /* ISP */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2A54129C336210001A3E6 /* NotISP.playground */,
+				EDD2A54229C3471D0001A3E6 /* ISP.playground */,
+			);
+			path = ISP;
+			sourceTree = "<group>";
+		};
+		EDD2A54329C374030001A3E6 /* DIP */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2A54B29C37AC70001A3E6 /* Factory */,
+				EDD2A54429C374110001A3E6 /* ProductList */,
+			);
+			path = DIP;
+			sourceTree = "<group>";
+		};
+		EDD2A54429C374110001A3E6 /* ProductList */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2A54529C374200001A3E6 /* Product.swift */,
+				EDD2A54729C375BA0001A3E6 /* ProductListUsecase.swift */,
+				EDD2A54929C3775A0001A3E6 /* ProductListDIContainer.swift */,
+			);
+			path = ProductList;
+			sourceTree = "<group>";
+		};
+		EDD2A54B29C37AC70001A3E6 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				EDD2A54D29C37C410001A3E6 /* Application_NotFactory.swift */,
+				EDD2A54F29C37C540001A3E6 /* ServiceConcrete_NotFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,6 +437,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDD2A52929C2A6780001A3E6 /* UserDefaultsRepository.swift in Sources */,
+				EDD2A54829C375BA0001A3E6 /* ProductListUsecase.swift in Sources */,
+				EDD2A55029C37C540001A3E6 /* ServiceConcrete_NotFactory.swift in Sources */,
 				ED773F5A29C1E54600A0849D /* MainViewController.swift in Sources */,
 				EDD2A53929C304370001A3E6 /* HDUseCase.swift in Sources */,
 				EDD2A52D29C2AB200001A3E6 /* EmojiUseCase.swift in Sources */,
@@ -393,8 +446,11 @@
 				EDD2A53D29C305710001A3E6 /* PointViewController.swift in Sources */,
 				EDD2A52729C2261A0001A3E6 /* EmojiViewController.swift in Sources */,
 				EDD2A53B29C304970001A3E6 /* WRUseCase.swift in Sources */,
+				EDD2A54E29C37C410001A3E6 /* Application_NotFactory.swift in Sources */,
 				EDD2A52B29C2A7BE0001A3E6 /* UserDefalutsService.swift in Sources */,
+				EDD2A54629C374200001A3E6 /* Product.swift in Sources */,
 				EDD2A53729C303CE0001A3E6 /* CardUseCase.swift in Sources */,
+				EDD2A54A29C3775A0001A3E6 /* ProductListDIContainer.swift in Sources */,
 				EDD2A53129C2ABD10001A3E6 /* EmojiModel.swift in Sources */,
 				ED773F9B29C1ECE400A0849D /* Cell.swift in Sources */,
 				EDD2A53F29C31CF70001A3E6 /* PointViewModel.swift in Sources */,

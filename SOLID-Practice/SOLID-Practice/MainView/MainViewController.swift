@@ -58,7 +58,12 @@ extension MainViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.row {
         case 0:
-            let vc = EmojiViewController()
+            let userDefaultsRepositoryImpl = UserDefaultsRepositoryImpl.shared
+            let userDefaultsServiceImpl = UserDefaultServiceImpl(userDefaultRepository: userDefaultsRepositoryImpl)
+            let emojiUseCaseImpl = EmojiUseCaseImpl(userDefaultsService: userDefaultsServiceImpl)
+            let viewModel = EmojiViewModelImpl(emojiUserCase: emojiUseCaseImpl)
+            
+            let vc = EmojiViewController(viewModel: viewModel)
             navigationController?.pushViewController(vc, animated: true)
         default:
             print("default")

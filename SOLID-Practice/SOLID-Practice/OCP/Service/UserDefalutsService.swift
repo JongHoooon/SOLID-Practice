@@ -37,7 +37,7 @@ class UserDefaultServiceImpl: UserDefaultsService {
     }
     
     func saveGreenCount(_ count: Int) {
-        userDefaultRepository.save(Key.redCount.rawValue, count)
+        userDefaultRepository.save(Key.greenCount.rawValue, count)
     }
     
     // MARK: - Get

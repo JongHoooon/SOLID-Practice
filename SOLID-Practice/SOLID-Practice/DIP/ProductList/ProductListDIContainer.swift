@@ -9,6 +9,15 @@ import Foundation
 
 final class ProductListDIContainer {
     
-//    lazy var productListViewController: ProductLis
+    lazy var productListViewController: ProductListViewController = {
+        return ProductListViewController.create(with: productListViewModel)
+    }()
     
+    private lazy var productListUseCaseImpl: ProductListUseCase = {
+        return ProductListUseCaseImpl()
+    }()
+
+    private lazy var productListViewModel: ProductListViewModel = {
+    return ProductListViewModelImpl(productListUseCase: productListUseCaseImpl)
+    }()
 }

@@ -58,6 +58,7 @@ extension MainViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.row {
         case 0:
+            
             // MARK: OCP
             
             let userDefaultsRepositoryImpl = UserDefaultsRepositoryImpl.shared
@@ -67,6 +68,7 @@ extension MainViewController: UITableViewDelegate {
             let vc = EmojiViewController(viewModel: viewModel)
             navigationController?.pushViewController(vc, animated: true)
         case 1:
+            
             // MARK: LSP
             
             let randomInt = Int.random(in: 0...1)
@@ -75,6 +77,15 @@ extension MainViewController: UITableViewDelegate {
             let vc = PointViewController(viewModel: viewModel)
             navigationController?.pushViewController(vc, animated: true)
             print(useCase)
+            
+        case 2:
+            
+            // MARK: - DIP
+            
+            let productListDIContainer = ProductListDIContainer()
+            let vc = productListDIContainer.productListViewController
+            navigationController?.pushViewController(vc, animated: true)
+            
         default:
             print("default")
         }

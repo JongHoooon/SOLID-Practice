@@ -21,4 +21,25 @@ protocol ButtonsViewModelOutput {}
 
 protocol ButtonsViewModel: ButtonsViewModelInput, ButtonsViewModelOutput {}
 
-final class Button
+final class ButtonsViewModelImpl: ButtonsViewModel {
+    
+    private let actions: ButtonsViewModelActions
+    private var buttonsUseCase: ButtonsUseCase
+    
+    init(actions: ButtonsViewModelActions, buttonsUseCase: ButtonsUseCase) {
+        self.actions = actions
+        self.buttonsUseCase = buttonsUseCase
+    }
+    
+    // MARK: - Input
+    
+    func didTapYellowButton() {
+        buttonsUseCase.yellowButtonCount += 1
+        actions.showYellowButton(buttonsUseCase.yellowButtonCount)
+    }
+    
+    func didTapGreenButton() {
+        buttonsUseCase.greenButtonCount += 1
+        actions.showGreenButton(buttonsUseCase.greenButtonCount)
+    }
+}

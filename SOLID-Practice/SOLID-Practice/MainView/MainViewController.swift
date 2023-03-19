@@ -86,6 +86,15 @@ extension MainViewController: UITableViewDelegate {
             let vc = productListDIContainer.productListViewController
             navigationController?.pushViewController(vc, animated: true)
             
+        case 3:
+            
+            // MARK: - Coordinator Pattern
+            
+            let buttonsDIContainer = ButtonsDIContainer()
+            let coordinator = buttonsDIContainer.makeButtonCoordinator(navigationController: navigationController!)
+            
+            coordinator.start()
+            
         default:
             print("default")
         }

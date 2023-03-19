@@ -12,10 +12,14 @@ import SnapKit
 
 class ButtonsViewController: UIViewController {
     
-    //    static func
+    static func create(with viewModel: ButtonsViewModel) -> ButtonsViewController {
+        let viewController = ButtonsViewController(viewModel: viewModel)
+        
+        return viewController
+    }
     
     private let disposeBag = DisposeBag()
-    //    private var viewModel:
+    private var viewModel: ButtonsViewModel!
     
     
     let buttonStackView: UIStackView = {
@@ -50,6 +54,33 @@ class ButtonsViewController: UIViewController {
         super.viewDidLoad()
         
         configureLayout()
+        bindInput()
+    }
+    
+    init(viewModel: ButtonsViewModel) {
+        super.init(nibName: nil, bundle: nil)
+        
+        self.viewModel = viewModel
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+private extension ButtonsViewController {
+    func bindInput() {
+        yellowButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.viewModel.didTapYellowButton()
+            })
+            .disposed(by: disposeBag)
+        
+        greenButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                self?.viewModel.didTapGreenButton()
+            })
+            .disposed(by: disposeBag)
     }
 }
 
@@ -71,7 +102,5 @@ private extension ButtonsViewController {
         buttonStackView.snp.makeConstraints {
             $0.center.equalToSuperview()
         }
-        
     }
-    
 }

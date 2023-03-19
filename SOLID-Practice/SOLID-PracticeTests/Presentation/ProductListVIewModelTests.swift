@@ -28,7 +28,7 @@ final class ProductListVIewModelTests: XCTestCase {
                 totalFee += $0.isSale ? $0.price * 0.5 : $0.price
             }
             return totalFee
-        }
+        } 
     }
     
     func test_whenUseCaseChanged_thenSuccessAccuracy() {

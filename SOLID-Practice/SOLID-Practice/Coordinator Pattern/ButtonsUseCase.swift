@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol ButtonUseCase {
+protocol ButtonsUseCase {
     var yellowButtonCount: Int { get set }
     var greenButtonCount: Int { get set }
 }
 
-final class ButtonUseCaseImpl: ButtonUseCase {
+final class ButtonsUseCaseImpl: ButtonsUseCase {
     var yellowButtonCount: Int {
         get {
             return UserDefaults.standard.integer(forKey: "yellowButton")
